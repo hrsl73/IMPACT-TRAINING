@@ -52,5 +52,6 @@ public class day1 {
         } else {
             System.out.println(ch + " is a consonant.");
         }
+        sc.close();
     }
 }
