@@ -136,7 +136,35 @@ public class day2 {
         //         System.out.println("Invalid day number");
         // }
 
-        int num = sc.nextInt();
-        System.out.println((num%2 == 0) ? "Even" : "Odd");
+        // int num = sc.nextInt();
+        // System.out.println((num%2 == 0) ? "Even" : "Odd");
+
+        //create a calculator using switch case
+        System.out.println("Enter first number: ");
+        int num1 = sc.nextInt();
+        System.out.println("Enter second number: ");
+        int num2 = sc.nextInt();
+        System.out.println("Enter operator (+, -, *, /): ");
+        char operator = sc.next().charAt(0);
+        switch (operator) {
+            case '+':
+                System.out.println("Result: " + (num1 + num2));
+                break;
+            case '-':
+                System.out.println("Result: " + (num1 - num2));
+                break;
+            case '*':
+                System.out.println("Result: " + (num1 * num2));
+                break;
+            case '/':
+                if (num2 != 0) {
+                    System.out.println("Result: " + (num1 / num2));
+                } else {
+                    System.out.println("Cannot divide by zero");
+                }
+                break;
+            default:
+                System.out.println("Invalid operator");
+        }
     }
 }
